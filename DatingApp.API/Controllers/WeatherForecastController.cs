@@ -10,11 +10,11 @@ using Microsoft.Extensions.Logging;
 namespace DatingApp.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    [Route("api/[controller]")]
+    public class ValuesController : ControllerBase
     {
         private readonly DataContext _context;
-        public WeatherForecastController(DataContext context){
+        public ValuesController(DataContext context){
             _context = context;
         }
         private static readonly string[] Summaries = new[]
