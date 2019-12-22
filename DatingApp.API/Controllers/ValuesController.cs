@@ -11,16 +11,13 @@ namespace DatingApp.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ValuesController : ControllerBase
+    public class ValuesController : Controller
     {
         private readonly DataContext _context;
         public ValuesController(DataContext context){
             _context = context;
         }
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+       
 
         /*private readonly ILogger<WeatherForecastController> _logger;
 
