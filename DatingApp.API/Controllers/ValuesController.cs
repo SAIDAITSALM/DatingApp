@@ -19,14 +19,7 @@ namespace DatingApp.API.Controllers
         public ValuesController(DataContext context){
             _context = context;
         }
-       
-
-        /*private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
-        {
-            _logger = logger;
-        }*/
+        [AllowAnonymous]
         [HttpGet]
         public async  Task<IActionResult> GetValues(){
             var values= await _context.Values.ToListAsync();
