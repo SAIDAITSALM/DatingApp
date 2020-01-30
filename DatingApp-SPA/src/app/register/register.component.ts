@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
-import { error } from 'protractor';
 
 @Component({
   selector: 'app-register',
@@ -25,5 +24,4 @@ export class RegisterComponent implements OnInit {
     this.cancelRegister.emit(false);
     console.log('Cancelled');
   }
- 
 }
